@@ -1,0 +1,30 @@
+server:
+  port: 8002
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    zet:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://localhost:1433;DatabaseName=ZET
+      username: sa
+      password: 123456
+    fam:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://localhost:1433;DatabaseName=FAM
+      username: sa
+      password: 123456
+  jpa:
+    database: sql_server
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2008Dialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+domain:
+  zetLink: https://localhost:8001/h5/economicdetail?id=
+  famLink: https://localhost:8003/page/h5/Notice?id=

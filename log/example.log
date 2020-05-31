@@ -1,0 +1,310 @@
+2020-05-31 19:11:02,898 755233 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER]
+2020-05-31 19:11:02,898 755233 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} update executed. effort 1. 1.7748 millis. update yzcm_notice set contents=?, cmc_count=?, cmc_link=?, cmc_logo=?, cmc_sj=?, cmc_sub_type=?, cmc_subtitle=?, cmc_title=?, cmc_type=?, cmc_zt=? where cmc_id=?
+2020-05-31 19:11:02,898 755233 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} clearParameters. 
+2020-05-31 19:11:02,898 755233 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,899 755234 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,899 755234 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:02,899 755234 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:02,899 755234 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit false
+2020-05-31 19:11:02,899 755234 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} Parameters : [据Cointelegraph消息，此前消息，印度储备银行（RBI，该国央行）最近对一项信息的回应显示，印度银行不被禁止处理加密货币业务。然而，Cointelegraph报道称，因为到目前为止，大多数银行仍拒绝修改其做法，拒绝为加密货币业务提供银行服务，在拒绝这些服务时，银行声称他们正在根据最高法院的判决等待印度储备银行的指引更新，但是印度储备银行没有相应的法律义务来发布任何这种更新，这一借口完全没有道理。相比之下，一些银行确实在向加密货币交易所提供服务，尽管有时会有取款限制。考虑到印度储备银行最近的回应，即没有对银行的禁令，以及银行期待印度储备银行发布的指引更新，有一件事是明确的——印度储备银行对打破目前的混乱状态并没有特别的兴趣。, 0, null, null, 2020-05-31 18:49:48.0, 2, aicoin资讯531042, 【币世界】 外媒：尽管已承认不禁止对加密企业的服务，但印度央行并不愿意打破目前的混乱状态, 3, 1]
+2020-05-31 19:11:02,899 755234 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER]
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} update executed. effort 1. 0.3758 millis. insert into yzcm_notice (contents, cmc_count, cmc_link, cmc_logo, cmc_sj, cmc_sub_type, cmc_subtitle, cmc_title, cmc_type, cmc_zt) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150104} open
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150104} Header: [GENERATED_KEYS]
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150104} Result: [673]
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150104} closed
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} clearParameters. 
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,900 755235 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit false
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} Parameters : [673]
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} Types : [INTEGER]
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006, rs-150105} query executed. 0.252 millis. select notice0_.cmc_id as cmc_id1_0_0_, notice0_.contents as contents2_0_0_, notice0_.cmc_count as cmc_coun3_0_0_, notice0_.cmc_link as cmc_link4_0_0_, notice0_.cmc_logo as cmc_logo5_0_0_, notice0_.cmc_sj as cmc_sj6_0_0_, notice0_.cmc_sub_type as cmc_sub_7_0_0_, notice0_.cmc_subtitle as cmc_subt8_0_0_, notice0_.cmc_title as cmc_titl9_0_0_, notice0_.cmc_type as cmc_typ10_0_0_, notice0_.cmc_zt as cmc_zt11_0_0_ from yzcm_notice notice0_ where notice0_.cmc_id=?
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150105} open
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150105} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:11:02,901 755236 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150105} Result: [673, 据Cointelegraph消息，此前消息，印度储备银行（RBI，该国央行）最近对一项信息的回应显示，印度银行不被禁止处理加密货币业务。然而，Cointelegraph报道称，因为到目前为止，大多数银行仍拒绝修改其做法，拒绝为加密货币业务提供银行服务，在拒绝这些服务时，银行声称他们正在根据最高法院的判决等待印度储备银行的指引更新，但是印度储备银行没有相应的法律义务来发布任何这种更新，这一借口完全没有道理。相比之下，一些银行确实在向加密货币交易所提供服务，尽管有时会有取款限制。考虑到印度储备银行最近的回应，即没有对银行的禁令，以及银行期待印度储备银行发布的指引更新，有一件事是明确的——印度储备银行对打破目前的混乱状态并没有特别的兴趣。, 0, null, null, 2020-05-31 18:49:48.0, 2, aicoin资讯531042, 【币世界】 外媒：尽管已承认不禁止对加密企业的服务，但印度央行并不愿意打破目前的混乱状态, 3, 1]
+2020-05-31 19:11:02,902 755237 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150105} closed
+2020-05-31 19:11:02,902 755237 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} clearParameters. 
+2020-05-31 19:11:02,902 755237 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Parameters : [据Cointelegraph消息，此前消息，印度储备银行（RBI，该国央行）最近对一项信息的回应显示，印度银行不被禁止处理加密货币业务。然而，Cointelegraph报道称，因为到目前为止，大多数银行仍拒绝修改其做法，拒绝为加密货币业务提供银行服务，在拒绝这些服务时，银行声称他们正在根据最高法院的判决等待印度储备银行的指引更新，但是印度储备银行没有相应的法律义务来发布任何这种更新，这一借口完全没有道理。相比之下，一些银行确实在向加密货币交易所提供服务，尽管有时会有取款限制。考虑到印度储备银行最近的回应，即没有对银行的禁令，以及银行期待印度储备银行发布的指引更新，有一件事是明确的——印度储备银行对打破目前的混乱状态并没有特别的兴趣。, 0, https://localhost:8001/h5/economicdetail?id=673, null, 2020-05-31 18:49:48.0, 2, aicoin资讯531042, 【币世界】 外媒：尽管已承认不禁止对加密企业的服务，但印度央行并不愿意打破目前的混乱状态, 3, 1, 673]
+2020-05-31 19:11:02,902 755237 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER]
+2020-05-31 19:11:02,902 755237 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} update executed. effort 1. 0.3228 millis. update yzcm_notice set contents=?, cmc_count=?, cmc_link=?, cmc_logo=?, cmc_sj=?, cmc_sub_type=?, cmc_subtitle=?, cmc_title=?, cmc_type=?, cmc_zt=? where cmc_id=?
+2020-05-31 19:11:02,902 755237 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} clearParameters. 
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit false
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} Parameters : [1.韩国将推出《2020年国家标准实施计划》，该计划总共推广18个项目，其中包括区块链等技术。
+2.CSW的法律团队已向法院提出动议，要求对CSW列出的比特币地址保密。
+3.浙江发布实施两条标准，以区块链技术破电商信任鸿沟。
+4.EOS创始人Daniel Larimer（BM）于推特称，EOS团队正在研究跨链通信协议IBC （Inter Blockchain Communication）相关技术。
+5.ETH非零地址数量达到40460000个的历史新高（ATH）。, 0, null, null, 2020-05-31 19:01:18.0, 2, aicoin资讯531043, 【币世界】 币世界晚内参：韩国国家标准实施计划将推广区块链项目, 3, 1]
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER]
+2020-05-31 19:11:02,903 755238 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} update executed. effort 1. 0.2537 millis. insert into yzcm_notice (contents, cmc_count, cmc_link, cmc_logo, cmc_sj, cmc_sub_type, cmc_subtitle, cmc_title, cmc_type, cmc_zt) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150106} open
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150106} Header: [GENERATED_KEYS]
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150106} Result: [674]
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150106} closed
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} clearParameters. 
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:02,904 755239 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit false
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} Parameters : [674]
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} Types : [INTEGER]
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006, rs-150107} query executed. 0.1858 millis. select notice0_.cmc_id as cmc_id1_0_0_, notice0_.contents as contents2_0_0_, notice0_.cmc_count as cmc_coun3_0_0_, notice0_.cmc_link as cmc_link4_0_0_, notice0_.cmc_logo as cmc_logo5_0_0_, notice0_.cmc_sj as cmc_sj6_0_0_, notice0_.cmc_sub_type as cmc_sub_7_0_0_, notice0_.cmc_subtitle as cmc_subt8_0_0_, notice0_.cmc_title as cmc_titl9_0_0_, notice0_.cmc_type as cmc_typ10_0_0_, notice0_.cmc_zt as cmc_zt11_0_0_ from yzcm_notice notice0_ where notice0_.cmc_id=?
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150107} open
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150107} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150107} Result: [674, 1.韩国将推出《2020年国家标准实施计划》，该计划总共推广18个项目，其中包括区块链等技术。
+2.CSW的法律团队已向法院提出动议，要求对CSW列出的比特币地址保密。
+3.浙江发布实施两条标准，以区块链技术破电商信任鸿沟。
+4.EOS创始人Daniel Larimer（BM）于推特称，EOS团队正在研究跨链通信协议IBC （Inter Blockchain Communication）相关技术。
+5.ETH非零地址数量达到40460000个的历史新高（ATH）。, 0, null, null, 2020-05-31 19:01:18.0, 2, aicoin资讯531043, 【币世界】 币世界晚内参：韩国国家标准实施计划将推广区块链项目, 3, 1]
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150107} closed
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} clearParameters. 
+2020-05-31 19:11:02,905 755240 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Parameters : [1.韩国将推出《2020年国家标准实施计划》，该计划总共推广18个项目，其中包括区块链等技术。
+2.CSW的法律团队已向法院提出动议，要求对CSW列出的比特币地址保密。
+3.浙江发布实施两条标准，以区块链技术破电商信任鸿沟。
+4.EOS创始人Daniel Larimer（BM）于推特称，EOS团队正在研究跨链通信协议IBC （Inter Blockchain Communication）相关技术。
+5.ETH非零地址数量达到40460000个的历史新高（ATH）。, 0, https://localhost:8001/h5/economicdetail?id=674, null, 2020-05-31 19:01:18.0, 2, aicoin资讯531043, 【币世界】 币世界晚内参：韩国国家标准实施计划将推广区块链项目, 3, 1, 674]
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER]
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} update executed. effort 1. 0.5652 millis. update yzcm_notice set contents=?, cmc_count=?, cmc_link=?, cmc_logo=?, cmc_sj=?, cmc_sub_type=?, cmc_subtitle=?, cmc_title=?, cmc_type=?, cmc_zt=? where cmc_id=?
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} clearParameters. 
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:02,906 755241 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit false
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} Parameters : [据天空新闻消息，贝佐斯将参与Beacon系列的融资活动。注：Beacon是一个众筹和销售平台，其最大的特点是支持比特币支付。, 0, null, null, 2020-05-31 19:07:33.0, 2, aicoin资讯531044, 【币世界】 贝佐斯将参与支持比特币的众筹平台Beacon的融资活动, 3, 1]
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER]
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} update executed. effort 1. 0.292 millis. insert into yzcm_notice (contents, cmc_count, cmc_link, cmc_logo, cmc_sj, cmc_sub_type, cmc_subtitle, cmc_title, cmc_type, cmc_zt) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150108} open
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150108} Header: [GENERATED_KEYS]
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150108} Result: [675]
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150108} closed
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120005} clearParameters. 
+2020-05-31 19:11:02,907 755242 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,908 755243 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,908 755243 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:02,908 755243 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:02,908 755243 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit false
+2020-05-31 19:11:02,908 755243 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} Parameters : [675]
+2020-05-31 19:11:02,908 755243 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} Types : [INTEGER]
+2020-05-31 19:11:02,909 755244 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006, rs-150109} query executed. 0.5009 millis. select notice0_.cmc_id as cmc_id1_0_0_, notice0_.contents as contents2_0_0_, notice0_.cmc_count as cmc_coun3_0_0_, notice0_.cmc_link as cmc_link4_0_0_, notice0_.cmc_logo as cmc_logo5_0_0_, notice0_.cmc_sj as cmc_sj6_0_0_, notice0_.cmc_sub_type as cmc_sub_7_0_0_, notice0_.cmc_subtitle as cmc_subt8_0_0_, notice0_.cmc_title as cmc_titl9_0_0_, notice0_.cmc_type as cmc_typ10_0_0_, notice0_.cmc_zt as cmc_zt11_0_0_ from yzcm_notice notice0_ where notice0_.cmc_id=?
+2020-05-31 19:11:02,909 755244 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150109} open
+2020-05-31 19:11:02,909 755244 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150109} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:11:02,909 755244 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150109} Result: [675, 据天空新闻消息，贝佐斯将参与Beacon系列的融资活动。注：Beacon是一个众筹和销售平台，其最大的特点是支持比特币支付。, 0, null, null, 2020-05-31 19:07:33.0, 2, aicoin资讯531044, 【币世界】 贝佐斯将参与支持比特币的众筹平台Beacon的融资活动, 3, 1]
+2020-05-31 19:11:02,909 755244 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150109} closed
+2020-05-31 19:11:02,909 755244 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120006} clearParameters. 
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Parameters : [据天空新闻消息，贝佐斯将参与Beacon系列的融资活动。注：Beacon是一个众筹和销售平台，其最大的特点是支持比特币支付。, 0, https://localhost:8001/h5/economicdetail?id=675, null, 2020-05-31 19:07:33.0, 2, aicoin资讯531044, 【币世界】 贝佐斯将参与支持比特币的众筹平台Beacon的融资活动, 3, 1, 675]
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} Types : [VARCHAR, INTEGER, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER]
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} update executed. effort 1. 0.296 millis. update yzcm_notice set contents=?, cmc_count=?, cmc_link=?, cmc_logo=?, cmc_sj=?, cmc_sub_type=?, cmc_subtitle=?, cmc_title=?, cmc_type=?, cmc_zt=? where cmc_id=?
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Statement - {conn-110005, pstmt-120007} clearParameters. 
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} commited
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} setAutoCommit true
+2020-05-31 19:11:02,910 755245 [scheduling-1] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:24,896 0 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2020-05-31 19:11:24,901 5 [main] DEBUG druid.sql.Statement - {conn-10001, stmt-20000} created
+2020-05-31 19:11:24,980 84 [main] DEBUG druid.sql.Statement - {conn-10001, stmt-20000} executed. 75.6887 millis. SELECT 1
+2020-05-31 19:11:24,982 86 [main] DEBUG druid.sql.Statement - {conn-10001, stmt-20000} closed
+2020-05-31 19:11:24,992 96 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2020-05-31 19:11:24,992 96 [main] DEBUG druid.sql.Statement - {conn-10002, stmt-20001} created
+2020-05-31 19:11:24,992 96 [main] DEBUG druid.sql.Statement - {conn-10002, stmt-20001} executed. 0.4876 millis. SELECT 1
+2020-05-31 19:11:24,993 97 [main] DEBUG druid.sql.Statement - {conn-10002, stmt-20001} closed
+2020-05-31 19:11:25,002 106 [main] DEBUG druid.sql.Connection - {conn-10003} connected
+2020-05-31 19:11:25,002 106 [main] DEBUG druid.sql.Statement - {conn-10003, stmt-20002} created
+2020-05-31 19:11:25,003 107 [main] DEBUG druid.sql.Statement - {conn-10003, stmt-20002} executed. 0.364 millis. SELECT 1
+2020-05-31 19:11:25,003 107 [main] DEBUG druid.sql.Statement - {conn-10003, stmt-20002} closed
+2020-05-31 19:11:25,012 116 [main] DEBUG druid.sql.Connection - {conn-10004} connected
+2020-05-31 19:11:25,012 116 [main] DEBUG druid.sql.Statement - {conn-10004, stmt-20003} created
+2020-05-31 19:11:25,012 116 [main] DEBUG druid.sql.Statement - {conn-10004, stmt-20003} executed. 0.4309 millis. SELECT 1
+2020-05-31 19:11:25,012 116 [main] DEBUG druid.sql.Statement - {conn-10004, stmt-20003} closed
+2020-05-31 19:11:25,021 125 [main] DEBUG druid.sql.Connection - {conn-10005} connected
+2020-05-31 19:11:25,021 125 [main] DEBUG druid.sql.Statement - {conn-10005, stmt-20004} created
+2020-05-31 19:11:25,022 126 [main] DEBUG druid.sql.Statement - {conn-10005, stmt-20004} executed. 0.4339 millis. SELECT 1
+2020-05-31 19:11:25,022 126 [main] DEBUG druid.sql.Statement - {conn-10005, stmt-20004} closed
+2020-05-31 19:11:25,024 128 [main] DEBUG druid.sql.Connection - {conn-10005} pool-connect
+2020-05-31 19:11:25,075 179 [main] DEBUG druid.sql.Connection - {conn-10005} pool-recycle
+2020-05-31 19:11:25,540 644 [main] DEBUG druid.sql.Connection - {conn-10005} pool-connect
+2020-05-31 19:11:25,674 778 [main] DEBUG druid.sql.Connection - {conn-10005} pool-recycle
+2020-05-31 19:11:25,725 829 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2020-05-31 19:11:25,725 829 [main] DEBUG druid.sql.Statement - {conn-110001, stmt-120000} created
+2020-05-31 19:11:25,726 830 [main] DEBUG druid.sql.Statement - {conn-110001, stmt-120000} executed. 0.5217 millis. SELECT 1
+2020-05-31 19:11:25,726 830 [main] DEBUG druid.sql.Statement - {conn-110001, stmt-120000} closed
+2020-05-31 19:11:25,735 839 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2020-05-31 19:11:25,735 839 [main] DEBUG druid.sql.Statement - {conn-110002, stmt-120001} created
+2020-05-31 19:11:25,735 839 [main] DEBUG druid.sql.Statement - {conn-110002, stmt-120001} executed. 0.4481 millis. SELECT 1
+2020-05-31 19:11:25,736 840 [main] DEBUG druid.sql.Statement - {conn-110002, stmt-120001} closed
+2020-05-31 19:11:25,747 851 [main] DEBUG druid.sql.Connection - {conn-110003} connected
+2020-05-31 19:11:25,747 851 [main] DEBUG druid.sql.Statement - {conn-110003, stmt-120002} created
+2020-05-31 19:11:25,747 851 [main] DEBUG druid.sql.Statement - {conn-110003, stmt-120002} executed. 0.4407 millis. SELECT 1
+2020-05-31 19:11:25,747 851 [main] DEBUG druid.sql.Statement - {conn-110003, stmt-120002} closed
+2020-05-31 19:11:25,758 862 [main] DEBUG druid.sql.Connection - {conn-110004} connected
+2020-05-31 19:11:25,758 862 [main] DEBUG druid.sql.Statement - {conn-110004, stmt-120003} created
+2020-05-31 19:11:25,759 863 [main] DEBUG druid.sql.Statement - {conn-110004, stmt-120003} executed. 0.5569 millis. SELECT 1
+2020-05-31 19:11:25,759 863 [main] DEBUG druid.sql.Statement - {conn-110004, stmt-120003} closed
+2020-05-31 19:11:25,769 873 [main] DEBUG druid.sql.Connection - {conn-110005} connected
+2020-05-31 19:11:25,769 873 [main] DEBUG druid.sql.Statement - {conn-110005, stmt-120004} created
+2020-05-31 19:11:25,770 874 [main] DEBUG druid.sql.Statement - {conn-110005, stmt-120004} executed. 0.5835 millis. SELECT 1
+2020-05-31 19:11:25,770 874 [main] DEBUG druid.sql.Statement - {conn-110005, stmt-120004} closed
+2020-05-31 19:11:25,771 875 [main] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:25,777 881 [main] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:11:25,805 909 [main] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:11:25,935 1039 [main] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:12:03,198 0 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2020-05-31 19:12:03,203 5 [main] DEBUG druid.sql.Statement - {conn-10001, stmt-20000} created
+2020-05-31 19:12:03,278 80 [main] DEBUG druid.sql.Statement - {conn-10001, stmt-20000} executed. 71.4955 millis. SELECT 1
+2020-05-31 19:12:03,280 82 [main] DEBUG druid.sql.Statement - {conn-10001, stmt-20000} closed
+2020-05-31 19:12:03,289 91 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2020-05-31 19:12:03,289 91 [main] DEBUG druid.sql.Statement - {conn-10002, stmt-20001} created
+2020-05-31 19:12:03,290 92 [main] DEBUG druid.sql.Statement - {conn-10002, stmt-20001} executed. 0.4416 millis. SELECT 1
+2020-05-31 19:12:03,290 92 [main] DEBUG druid.sql.Statement - {conn-10002, stmt-20001} closed
+2020-05-31 19:12:03,299 101 [main] DEBUG druid.sql.Connection - {conn-10003} connected
+2020-05-31 19:12:03,299 101 [main] DEBUG druid.sql.Statement - {conn-10003, stmt-20002} created
+2020-05-31 19:12:03,300 102 [main] DEBUG druid.sql.Statement - {conn-10003, stmt-20002} executed. 0.3853 millis. SELECT 1
+2020-05-31 19:12:03,300 102 [main] DEBUG druid.sql.Statement - {conn-10003, stmt-20002} closed
+2020-05-31 19:12:03,309 111 [main] DEBUG druid.sql.Connection - {conn-10004} connected
+2020-05-31 19:12:03,309 111 [main] DEBUG druid.sql.Statement - {conn-10004, stmt-20003} created
+2020-05-31 19:12:03,310 112 [main] DEBUG druid.sql.Statement - {conn-10004, stmt-20003} executed. 0.4967 millis. SELECT 1
+2020-05-31 19:12:03,310 112 [main] DEBUG druid.sql.Statement - {conn-10004, stmt-20003} closed
+2020-05-31 19:12:03,319 121 [main] DEBUG druid.sql.Connection - {conn-10005} connected
+2020-05-31 19:12:03,319 121 [main] DEBUG druid.sql.Statement - {conn-10005, stmt-20004} created
+2020-05-31 19:12:03,320 122 [main] DEBUG druid.sql.Statement - {conn-10005, stmt-20004} executed. 0.3953 millis. SELECT 1
+2020-05-31 19:12:03,320 122 [main] DEBUG druid.sql.Statement - {conn-10005, stmt-20004} closed
+2020-05-31 19:12:03,322 124 [main] DEBUG druid.sql.Connection - {conn-10005} pool-connect
+2020-05-31 19:12:03,371 173 [main] DEBUG druid.sql.Connection - {conn-10005} pool-recycle
+2020-05-31 19:12:03,803 605 [main] DEBUG druid.sql.Connection - {conn-10005} pool-connect
+2020-05-31 19:12:03,933 735 [main] DEBUG druid.sql.Connection - {conn-10005} pool-recycle
+2020-05-31 19:12:03,978 780 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2020-05-31 19:12:03,978 780 [main] DEBUG druid.sql.Statement - {conn-110001, stmt-120000} created
+2020-05-31 19:12:03,979 781 [main] DEBUG druid.sql.Statement - {conn-110001, stmt-120000} executed. 0.4836 millis. SELECT 1
+2020-05-31 19:12:03,979 781 [main] DEBUG druid.sql.Statement - {conn-110001, stmt-120000} closed
+2020-05-31 19:12:03,987 789 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2020-05-31 19:12:03,988 790 [main] DEBUG druid.sql.Statement - {conn-110002, stmt-120001} created
+2020-05-31 19:12:03,988 790 [main] DEBUG druid.sql.Statement - {conn-110002, stmt-120001} executed. 0.435 millis. SELECT 1
+2020-05-31 19:12:03,988 790 [main] DEBUG druid.sql.Statement - {conn-110002, stmt-120001} closed
+2020-05-31 19:12:03,998 800 [main] DEBUG druid.sql.Connection - {conn-110003} connected
+2020-05-31 19:12:03,998 800 [main] DEBUG druid.sql.Statement - {conn-110003, stmt-120002} created
+2020-05-31 19:12:03,999 801 [main] DEBUG druid.sql.Statement - {conn-110003, stmt-120002} executed. 0.4507 millis. SELECT 1
+2020-05-31 19:12:03,999 801 [main] DEBUG druid.sql.Statement - {conn-110003, stmt-120002} closed
+2020-05-31 19:12:04,007 809 [main] DEBUG druid.sql.Connection - {conn-110004} connected
+2020-05-31 19:12:04,008 810 [main] DEBUG druid.sql.Statement - {conn-110004, stmt-120003} created
+2020-05-31 19:12:04,008 810 [main] DEBUG druid.sql.Statement - {conn-110004, stmt-120003} executed. 0.4349 millis. SELECT 1
+2020-05-31 19:12:04,008 810 [main] DEBUG druid.sql.Statement - {conn-110004, stmt-120003} closed
+2020-05-31 19:12:04,018 820 [main] DEBUG druid.sql.Connection - {conn-110005} connected
+2020-05-31 19:12:04,018 820 [main] DEBUG druid.sql.Statement - {conn-110005, stmt-120004} created
+2020-05-31 19:12:04,018 820 [main] DEBUG druid.sql.Statement - {conn-110005, stmt-120004} executed. 0.482 millis. SELECT 1
+2020-05-31 19:12:04,019 821 [main] DEBUG druid.sql.Statement - {conn-110005, stmt-120004} closed
+2020-05-31 19:12:04,020 822 [main] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:12:04,024 826 [main] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:12:04,047 849 [main] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:12:04,172 974 [main] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:12:33,860 0 [main] DEBUG druid.sql.Connection - {conn-10001} connected
+2020-05-31 19:12:33,944 84 [main] DEBUG druid.sql.Connection - {conn-10002} connected
+2020-05-31 19:12:33,953 93 [main] DEBUG druid.sql.Connection - {conn-10003} connected
+2020-05-31 19:12:33,963 103 [main] DEBUG druid.sql.Connection - {conn-10004} connected
+2020-05-31 19:12:33,972 112 [main] DEBUG druid.sql.Connection - {conn-10005} connected
+2020-05-31 19:12:33,975 115 [main] DEBUG druid.sql.Connection - {conn-10005} pool-connect
+2020-05-31 19:12:34,021 161 [main] DEBUG druid.sql.Connection - {conn-10005} pool-recycle
+2020-05-31 19:12:34,423 563 [main] DEBUG druid.sql.Connection - {conn-10005} pool-connect
+2020-05-31 19:12:34,548 688 [main] DEBUG druid.sql.Connection - {conn-10005} pool-recycle
+2020-05-31 19:12:34,592 732 [main] DEBUG druid.sql.Connection - {conn-110001} connected
+2020-05-31 19:12:34,601 741 [main] DEBUG druid.sql.Connection - {conn-110002} connected
+2020-05-31 19:12:34,611 751 [main] DEBUG druid.sql.Connection - {conn-110003} connected
+2020-05-31 19:12:34,620 760 [main] DEBUG druid.sql.Connection - {conn-110004} connected
+2020-05-31 19:12:34,629 769 [main] DEBUG druid.sql.Connection - {conn-110005} connected
+2020-05-31 19:12:34,630 770 [main] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:12:34,634 774 [main] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:12:34,654 794 [main] DEBUG druid.sql.Connection - {conn-110005} pool-connect
+2020-05-31 19:12:34,777 917 [main] DEBUG druid.sql.Connection - {conn-110005} pool-recycle
+2020-05-31 19:13:01,892 0 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150000} open
+2020-05-31 19:13:01,895 3 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150000} Header: [GENERATED_KEYS]
+2020-05-31 19:13:01,897 5 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150000} Result: [676]
+2020-05-31 19:13:01,898 6 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150000} closed
+2020-05-31 19:13:01,943 51 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150001} open
+2020-05-31 19:13:01,943 51 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150001} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:01,945 53 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150001} Result: [676, DeFi项目Synthetix发推称：“一些SNX质押用户最近一直在抱怨以太坊的gas费用，不幸的是，我们几乎无法控制gas费用，但我们已经写了一份指南，告诉大家如何使用授权钱包以尽可能低的成本获得质押奖励。”, 0, null, null, 2020-05-31 18:17:18.0, 2, aicoin资讯531038, 【币世界】 Synthetix发布指南文章，指导用户以尽可能低的gas费用获得质押奖励, 3, 1]
+2020-05-31 19:13:01,949 57 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150001} closed
+2020-05-31 19:13:01,960 68 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150002} open
+2020-05-31 19:13:01,960 68 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150002} Header: [GENERATED_KEYS]
+2020-05-31 19:13:01,960 68 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150002} Result: [677]
+2020-05-31 19:13:01,961 69 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150002} closed
+2020-05-31 19:13:01,963 71 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150003} open
+2020-05-31 19:13:01,963 71 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150003} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:01,963 71 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150003} Result: [677, 据新京报消息，五粮液董事会秘书彭智辅在介绍五粮液新募投项目时表示，五粮液数字化标杆的打造，通过全面启动智慧门店建设、构建大数据监测系统、将区块链技术在白酒场景中运用表现出来。五粮液基于区块链技术的数字酒证以及新成立的新零售管理公司，便是五粮液在数字化领域作出的直接探索。, 0, null, null, 2020-05-31 18:45:33.0, 2, aicoin资讯531041, 【币世界】 五粮液董事会秘书：通过将区块链技术在白酒场景中运用 打造数字化标杆, 3, 1]
+2020-05-31 19:13:01,964 72 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150003} closed
+2020-05-31 19:13:01,970 78 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150004} open
+2020-05-31 19:13:01,970 78 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150004} Header: [GENERATED_KEYS]
+2020-05-31 19:13:01,970 78 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150004} Result: [678]
+2020-05-31 19:13:01,970 78 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150004} closed
+2020-05-31 19:13:01,973 81 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150005} open
+2020-05-31 19:13:01,973 81 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150005} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:01,973 81 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150005} Result: [678, 据Cointelegraph消息，此前消息，印度储备银行（RBI，该国央行）最近对一项信息的回应显示，印度银行不被禁止处理加密货币业务。然而，Cointelegraph报道称，因为到目前为止，大多数银行仍拒绝修改其做法，拒绝为加密货币业务提供银行服务，在拒绝这些服务时，银行声称他们正在根据最高法院的判决等待印度储备银行的指引更新，但是印度储备银行没有相应的法律义务来发布任何这种更新，这一借口完全没有道理。相比之下，一些银行确实在向加密货币交易所提供服务，尽管有时会有取款限制。考虑到印度储备银行最近的回应，即没有对银行的禁令，以及银行期待印度储备银行发布的指引更新，有一件事是明确的——印度储备银行对打破目前的混乱状态并没有特别的兴趣。, 0, null, null, 2020-05-31 18:49:48.0, 2, aicoin资讯531042, 【币世界】 外媒：尽管已承认不禁止对加密企业的服务，但印度央行并不愿意打破目前的混乱状态, 3, 1]
+2020-05-31 19:13:01,974 82 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150005} closed
+2020-05-31 19:13:01,977 85 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150006} open
+2020-05-31 19:13:01,977 85 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150006} Header: [GENERATED_KEYS]
+2020-05-31 19:13:01,978 86 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150006} Result: [679]
+2020-05-31 19:13:01,978 86 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150006} closed
+2020-05-31 19:13:01,980 88 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150007} open
+2020-05-31 19:13:01,980 88 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150007} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:01,981 89 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150007} Result: [679, 1.韩国将推出《2020年国家标准实施计划》，该计划总共推广18个项目，其中包括区块链等技术。
+2.CSW的法律团队已向法院提出动议，要求对CSW列出的比特币地址保密。
+3.浙江发布实施两条标准，以区块链技术破电商信任鸿沟。
+4.EOS创始人Daniel Larimer（BM）于推特称，EOS团队正在研究跨链通信协议IBC （Inter Blockchain Communication）相关技术。
+5.ETH非零地址数量达到40460000个的历史新高（ATH）。, 0, null, null, 2020-05-31 19:01:18.0, 2, aicoin资讯531043, 【币世界】 币世界晚内参：韩国国家标准实施计划将推广区块链项目, 3, 1]
+2020-05-31 19:13:01,982 90 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150007} closed
+2020-05-31 19:13:01,985 93 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150008} open
+2020-05-31 19:13:01,985 93 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150008} Header: [GENERATED_KEYS]
+2020-05-31 19:13:01,985 93 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150008} Result: [680]
+2020-05-31 19:13:01,986 94 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120005, rs-150008} closed
+2020-05-31 19:13:01,988 96 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150009} open
+2020-05-31 19:13:01,988 96 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150009} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:01,988 96 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150009} Result: [680, 据天空新闻消息，贝佐斯将参与Beacon系列的融资活动。注：Beacon是一个众筹和销售平台，其最大的特点是支持比特币支付。, 0, null, null, 2020-05-31 19:07:33.0, 2, aicoin资讯531044, 【币世界】 贝佐斯将参与支持比特币的众筹平台Beacon的融资活动, 3, 1]
+2020-05-31 19:13:01,989 97 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-110005, pstmt-120006, rs-150009} closed
+2020-05-31 19:13:03,345 1453 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50000} open
+2020-05-31 19:13:03,345 1453 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50000} Header: [GENERATED_KEYS]
+2020-05-31 19:13:03,346 1454 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50000} Result: [318]
+2020-05-31 19:13:03,346 1454 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50000} closed
+2020-05-31 19:13:03,349 1457 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50001} open
+2020-05-31 19:13:03,350 1458 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50001} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:03,350 1458 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50001} Result: [318, DeFi项目Synthetix发推称：“一些SNX质押用户最近一直在抱怨以太坊的gas费用，不幸的是，我们几乎无法控制gas费用，但我们已经写了一份指南，告诉大家如何使用授权钱包以尽可能低的成本获得质押奖励。”, 0, null, null, 2020-05-31 18:17:18.0, 2, aicoin资讯531038, 【币世界】 Synthetix发布指南文章，指导用户以尽可能低的gas费用获得质押奖励, 3, 1]
+2020-05-31 19:13:03,351 1459 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50001} closed
+2020-05-31 19:13:03,354 1462 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50002} open
+2020-05-31 19:13:03,355 1463 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50002} Header: [GENERATED_KEYS]
+2020-05-31 19:13:03,355 1463 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50002} Result: [319]
+2020-05-31 19:13:03,355 1463 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50002} closed
+2020-05-31 19:13:03,357 1465 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50003} open
+2020-05-31 19:13:03,357 1465 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50003} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:03,358 1466 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50003} Result: [319, 据新京报消息，五粮液董事会秘书彭智辅在介绍五粮液新募投项目时表示，五粮液数字化标杆的打造，通过全面启动智慧门店建设、构建大数据监测系统、将区块链技术在白酒场景中运用表现出来。五粮液基于区块链技术的数字酒证以及新成立的新零售管理公司，便是五粮液在数字化领域作出的直接探索。, 0, null, null, 2020-05-31 18:45:33.0, 2, aicoin资讯531041, 【币世界】 五粮液董事会秘书：通过将区块链技术在白酒场景中运用 打造数字化标杆, 3, 1]
+2020-05-31 19:13:03,358 1466 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50003} closed
+2020-05-31 19:13:03,361 1469 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50004} open
+2020-05-31 19:13:03,361 1469 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50004} Header: [GENERATED_KEYS]
+2020-05-31 19:13:03,362 1470 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50004} Result: [320]
+2020-05-31 19:13:03,362 1470 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50004} closed
+2020-05-31 19:13:03,365 1473 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50005} open
+2020-05-31 19:13:03,365 1473 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50005} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:03,365 1473 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50005} Result: [320, 据Cointelegraph消息，此前消息，印度储备银行（RBI，该国央行）最近对一项信息的回应显示，印度银行不被禁止处理加密货币业务。然而，Cointelegraph报道称，因为到目前为止，大多数银行仍拒绝修改其做法，拒绝为加密货币业务提供银行服务，在拒绝这些服务时，银行声称他们正在根据最高法院的判决等待印度储备银行的指引更新，但是印度储备银行没有相应的法律义务来发布任何这种更新，这一借口完全没有道理。相比之下，一些银行确实在向加密货币交易所提供服务，尽管有时会有取款限制。考虑到印度储备银行最近的回应，即没有对银行的禁令，以及银行期待印度储备银行发布的指引更新，有一件事是明确的——印度储备银行对打破目前的混乱状态并没有特别的兴趣。, 0, null, null, 2020-05-31 18:49:48.0, 2, aicoin资讯531042, 【币世界】 外媒：尽管已承认不禁止对加密企业的服务，但印度央行并不愿意打破目前的混乱状态, 3, 1]
+2020-05-31 19:13:03,366 1474 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50005} closed
+2020-05-31 19:13:03,370 1478 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50006} open
+2020-05-31 19:13:03,370 1478 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50006} Header: [GENERATED_KEYS]
+2020-05-31 19:13:03,370 1478 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50006} Result: [321]
+2020-05-31 19:13:03,371 1479 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50006} closed
+2020-05-31 19:13:03,372 1480 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50007} open
+2020-05-31 19:13:03,373 1481 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50007} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:03,373 1481 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50007} Result: [321, 1.韩国将推出《2020年国家标准实施计划》，该计划总共推广18个项目，其中包括区块链等技术。
+2.CSW的法律团队已向法院提出动议，要求对CSW列出的比特币地址保密。
+3.浙江发布实施两条标准，以区块链技术破电商信任鸿沟。
+4.EOS创始人Daniel Larimer（BM）于推特称，EOS团队正在研究跨链通信协议IBC （Inter Blockchain Communication）相关技术。
+5.ETH非零地址数量达到40460000个的历史新高（ATH）。, 0, null, null, 2020-05-31 19:01:18.0, 2, aicoin资讯531043, 【币世界】 币世界晚内参：韩国国家标准实施计划将推广区块链项目, 3, 1]
+2020-05-31 19:13:03,374 1482 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50007} closed
+2020-05-31 19:13:03,377 1485 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50008} open
+2020-05-31 19:13:03,377 1485 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50008} Header: [GENERATED_KEYS]
+2020-05-31 19:13:03,377 1485 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50008} Result: [322]
+2020-05-31 19:13:03,377 1485 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50008} closed
+2020-05-31 19:13:03,380 1488 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} open
+2020-05-31 19:13:03,380 1488 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Header: [cmc_id1_0_0_, contents2_0_0_, cmc_coun3_0_0_, cmc_link4_0_0_, cmc_logo5_0_0_, cmc_sj6_0_0_, cmc_sub_7_0_0_, cmc_subt8_0_0_, cmc_titl9_0_0_, cmc_typ10_0_0_, cmc_zt11_0_0_]
+2020-05-31 19:13:03,380 1488 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Result: [322, 据天空新闻消息，贝佐斯将参与Beacon系列的融资活动。注：Beacon是一个众筹和销售平台，其最大的特点是支持比特币支付。, 0, null, null, 2020-05-31 19:07:33.0, 2, aicoin资讯531044, 【币世界】 贝佐斯将参与支持比特币的众筹平台Beacon的融资活动, 3, 1]
+2020-05-31 19:13:03,381 1489 [scheduling-1] DEBUG druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} closed
