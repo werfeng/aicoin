@@ -79,14 +79,14 @@ public class Btc8Job {
     public void famrdkxjob(){
         try{
             //获取最大id
-            String maxId = noticeDao.getMaxId(2);
+            String maxId = famNoticeDao.getMaxId(2);
             List<FamNotice> list = new ArrayList<>();
             Btc8ReptileUtil.rdzx2(list,maxId);
             //列表倒着遍历
             for(int i =list.size()-1;i>=0;i--){
                 FamNotice notice = list.get(i);
                 famNoticeDao.save(notice);
-                notice.setLink(zetLink+notice.getId());
+                notice.setLink(famLink+notice.getId());
                 famNoticeDao.save(notice);
             }
         }catch (Exception e){
@@ -94,7 +94,7 @@ public class Btc8Job {
         }
     }
 
-    @Scheduled(cron = "* 0/11 * * * ?")
+    @Scheduled(cron = "40 0/11 * * * ?")
 //    @Scheduled(cron = "0 0/1 * * * ?")
     public void zetxwjob(){
         int[] subTypes = {0, 1, 3, 4};
@@ -119,7 +119,7 @@ public class Btc8Job {
         }
     }
 
-    @Scheduled(cron = "* 0/11 * * * ?")
+    @Scheduled(cron = "10 0/17 * * * ?")
 //    @Scheduled(cron = "0 0/1 * * * ?")
     public void famxwjob(){
         int[] subTypes = {0, 1, 3, 4};
@@ -136,7 +136,7 @@ public class Btc8Job {
             for(int i =list.size()-1;i>=0;i--){
                 FamNotice notice = list.get(i);
                 famNoticeDao.save(notice);
-                notice.setLink(zetLink+notice.getId());
+                notice.setLink(famLink+notice.getId());
                 famNoticeDao.save(notice);
             }
         }catch (Exception e){
