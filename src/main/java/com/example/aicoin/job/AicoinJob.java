@@ -4,8 +4,8 @@ import com.example.aicoin.dao.fam.FAMNoticeDao;
 import com.example.aicoin.dao.zet.NoticeDao;
 import com.example.aicoin.entity.fam.FamNotice;
 import com.example.aicoin.entity.zet.Notice;
-import com.example.aicoin.util.AiCionReptileUtil;
-import com.example.aicoin.util.AiCionReptileUtil1;
+import com.example.aicoin.util.aicoin.AiCionReptileUtil;
+import com.example.aicoin.util.aicoin.AiCionReptileUtil1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -17,7 +17,7 @@ import java.util.List;
  * date 2020/5/30
  */
 @Component
-public class FJob {
+public class AicoinJob {
 
     @Autowired
     private NoticeDao noticeDao;
@@ -31,7 +31,7 @@ public class FJob {
     @Value("${domain.famLink}")
     private String famLink;
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+//    @Scheduled(cron = "0 0/1 * * * ?")
     public void job(){
         try{
             //大于上半个小时时间
@@ -59,7 +59,7 @@ public class FJob {
         }
     }
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+//    @Scheduled(cron = "0 0/1 * * * ?")
     public void job1(){
         try {
             //大于上半个小时时间

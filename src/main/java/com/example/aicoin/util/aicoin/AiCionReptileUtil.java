@@ -1,26 +1,25 @@
-package com.example.aicoin.util;
+package com.example.aicoin.util.aicoin;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.example.aicoin.entity.fam.FamNotice;
+import com.example.aicoin.entity.zet.Notice;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
- * creator  admin002
+ * creator  xwf
  * date 2020/3/19
  */
-public class AiCionReptileUtil1 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AiCionReptileUtil.class);
+public class AiCionReptileUtil {
     //https://www.aicoin.cn/api/data/moreFlash 参数可以有 firstid 开始id 和 lastid 结束id       数据排序是按照时间倒叙
     //热点资讯
-    public static void rdzx(long currentTimeMillis, List<FamNotice> list) {
+    public static void rdzx(long currentTimeMillis, List<Notice> list) {
         String URL = "https://www.aicoin.cn/api/data/moreFlash?pagesize=100";
         String s = HttpUtil.doGet(URL);
         if(s!=null){
@@ -43,7 +42,7 @@ public class AiCionReptileUtil1 {
                     String title = body.substring(0,i1)+body.substring(i1+1, i2);
                     String content = body.substring(i2+1);
                     String contentEdit = content;
-                    FamNotice notice = new FamNotice();
+                    Notice notice = new Notice();
                     notice.setContents(contentEdit);
                     notice.setSj(new Date(timeLong));
                     notice.setSubtitle(subTitle+jsonObject.getString("id"));
@@ -69,7 +68,7 @@ public class AiCionReptileUtil1 {
     public static final String JS_URL = "https://www.aicoin.cn/api/data/news?cat=block-chain";
     //矿业
     public static final String KY_URL = "https://www.aicoin.cn/api/data/news?cat=halving";
-    public static void xw(long currentTimeMillis, List<FamNotice> list) {
+    public static void xw(long currentTimeMillis, List<Notice> list) {
         String[] urls = {TT_URL,JR_URL,JS_URL,KY_URL};
         String[] details = {"aicoin头条","aicoin金融","aicoin技术","aicoin矿业"};
         int[] subTypes = {0,3,5,4};
@@ -83,84 +82,62 @@ public class AiCionReptileUtil1 {
                 if(timeLong<currentTimeMillis){
                     break;
                 }
-                FamNotice notice = convert(jsonObject, details[h], timeLong, subTypes[h]);
+                Notice notice = convert(jsonObject, details[h], timeLong, subTypes[h]);
                 list.add(notice);
             }
         }
     }
 
     //转换对象
-    public static FamNotice convert(JSONObject jsonObject, String subTitle, long timeLong, int subType) {
+    public static Notice convert(JSONObject jsonObject, String subTitle, long timeLong, int subType) {
         String title = jsonObject.getString("title");
+        String logo = jsonObject.getString("cover");
         String id = jsonObject.getString("id");
-        String[] contentEdit = getContent(id);
-        FamNotice notice = new FamNotice();
+        String contentEdit = getContent(id);
+        Notice notice = new Notice();
         notice.setSj(new Date(timeLong));
         notice.setSubtitle(subTitle+id);
         notice.setTitle(title);
         notice.setType(3);
         notice.setCount(0);
-        //如果接口请求频繁，获取不到数据，将contents字段赋值id，后面操作失败列表时使用
         if(contentEdit == null){
             notice.setZt(0);
-            notice.setContents(id);
         }else{
             notice.setZt(1);
-            notice.setContents(contentEdit[0]);
-            notice.setLogo(contentEdit[1]);
+            notice.setContents(contentEdit);
         }
         notice.setSubType(subType);
+        notice.setLogo(logo);
         return notice;
     }
     //单篇文章url前缀
     public static final String ARTICLE_URL_PREFIX = "https://www.aicoin.cn/article/";
     public static final String ARTICLE_URL_SUFFIX = ".html";
-    //根据aicion网站文章id获取网页文本信息和logo，返回结果是一个string数组，第一个值是文本信息，第二个值是logo
-    public static String[] getContent(String id) {
-        String [] strs = new String[2];
-        Elements elements = null;
-        Elements elements1 = null;
-        Element element = null;
-        String s1 = null;
-        Document document = null;
-        String logo = null;
-        try{
-            //完整url 前缀+id+后缀
-            String artUrl = ARTICLE_URL_PREFIX+id+ARTICLE_URL_SUFFIX;
-            s1 = HttpUtil.doGet(artUrl);
-            document = Jsoup.parse(s1);
-
-            elements = document.getElementsByClass("aicoin-editor");
-            if(elements == null || elements.size() == 0) {
-                elements = document.getElementsByClass("article-main");
-            }
-            //请求频繁加入失败列表，补偿请求
-            if(elements == null || elements.size() ==0){
-                return null;
-            }
-            //图片图存本地，替换网络图片地址
-            element = elements.get(0);
-            /*Elements img = element.getElementsByTag("img");
-            if(img!=null && img.size()>0){
-                for(int i =0;i<img.size();i++){
-                    Element item = img.get(i);
-                    String url = item.attr("src");
-                    //文件存储到article/id 目录下，id是文章网站获取到的
-                    String filePath = FileUtil.downloadAndSaveFile(url,"article/"+id, "");
-                    item.attr("src",filePath);
-                    if(i==0){
-                        logo = img.get(0).attr("src");
-                    }
-                }
-            }*/
-            elements1 = element.children();
-            strs[0]=elements1.toString();
-            strs[1]=logo;
-        }catch (Exception e){
-            LOGGER.info("爬取数据异常，可能是请求过于频繁，id："+id);
-            e.printStackTrace();
+    //根据aicion网站文章id获取网页文本信息
+    public static String getContent(String id) {
+        //完整url 前缀+id+后缀
+        String artUrl = ARTICLE_URL_PREFIX+id+ARTICLE_URL_SUFFIX;
+        String s1 = HttpUtil.doGet(artUrl);
+        Document document = Jsoup.parse(s1);
+        Elements elements = document.getElementsByClass("aicoin-editor");
+        if(elements == null || elements.size() == 0) {
+            elements = document.getElementsByClass("article-main");
         }
-        return strs;
+        //接口请求频繁，可能会获取到错误提示页面，fam已修改
+        if(elements==null || elements.size()==0){
+            return null;
+        }
+        Element element = elements.get(0);
+        Elements elements1 = element.children();
+        return elements1.toString();
     }
 
+    public static void main(String[] args) {
+        long currentTimeMillis = System.currentTimeMillis()-1000*60*600;
+        List<Notice> list = new ArrayList<>();
+        xw(currentTimeMillis, list);
+
+        String s = JSONArray.toJSONString(list);
+        System.out.println(s);
+    }
 }

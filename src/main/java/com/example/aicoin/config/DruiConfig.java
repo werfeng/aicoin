@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
- * 数据库连接属性配置
+ * 数据库池配置
  */
 @ServletComponentScan
 @Configuration
