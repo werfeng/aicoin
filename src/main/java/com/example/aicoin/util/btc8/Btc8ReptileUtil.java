@@ -134,7 +134,7 @@ public class Btc8ReptileUtil {
     public static final int[] subTypes = {0, 1, 3, 4};
 
     public static void xw1(List<Notice> list, String [] maxIds) {
-        load:for (int h = 0; h < urls.length; h++) {
+        for (int h = 0; h < urls.length; h++) {
             String s = HttpUtil.doGet(urls[h]);
             JSONObject returnObj = JSONObject.parseObject(s);
             JSONObject data = returnObj.getJSONObject("data");
@@ -142,7 +142,7 @@ public class Btc8ReptileUtil {
             int size = array.size();
             String maxId = maxIds[h];
             int subType = subTypes[h];
-            for (int i = 0; i < size; i++) {
+            load:for (int i = 0; i < size; i++) {
                 JSONObject jsonObject = array.getJSONObject(i);
                 String id = jsonObject.getString("id");
                 String noticeId = subTitle + id;
