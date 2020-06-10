@@ -142,6 +142,9 @@ public class Btc8ReptileUtil {
             int size = array.size();
             String maxId = maxIds[h];
             int subType = subTypes[h];
+            if(subType==1){
+                continue;
+            }
             load:for (int i = 0; i < size; i++) {
                 JSONObject jsonObject = array.getJSONObject(i);
                 String id = jsonObject.getString("id");
