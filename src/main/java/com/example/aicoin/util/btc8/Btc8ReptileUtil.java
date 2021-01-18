@@ -28,6 +28,7 @@ public class Btc8ReptileUtil {
 //        String URL = "https://gate.8btc.com/w1/news/list?num=20&cat_id=4481&page=1";
         String URL = "https://www.8btc.com/flash";
         String s = HttpUtil.doGet(URL);
+        System.out.println("热点资讯："+s);
         if (s != null) {
             Document document = Jsoup.parse(s);
             Elements titleElements = document.getElementsByClass("flash-item__title");
@@ -136,6 +137,7 @@ public class Btc8ReptileUtil {
     public static void xw1(List<Notice> list, String [] maxIds) {
         for (int h = 0; h < urls.length; h++) {
             String s = HttpUtil.doGet(urls[h]);
+            System.out.println(urls[h]+"："+s);
             JSONObject returnObj = JSONObject.parseObject(s);
             JSONObject data = returnObj.getJSONObject("data");
             JSONArray array = data.getJSONArray("list");
@@ -145,7 +147,17 @@ public class Btc8ReptileUtil {
             if(subType==1){
                 continue;
             }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             load:for (int i = 0; i < size; i++) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 JSONObject jsonObject = array.getJSONObject(i);
                 String id = jsonObject.getString("id");
                 String noticeId = subTitle + id;
@@ -183,7 +195,17 @@ public class Btc8ReptileUtil {
             int size = array.size();
             String maxId = maxIds[h];
             int subType = subTypes[h];
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             load:for (int i = 0; i < size; i++) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 JSONObject jsonObject = array.getJSONObject(i);
                 String id = jsonObject.getString("id");
                 String noticeId = subTitle + id;
@@ -224,6 +246,7 @@ public class Btc8ReptileUtil {
         Document document = Jsoup.parse(s1);
         Elements elements = document.getElementsByClass("bbt-html");
         if (elements == null || elements.size() == 0) {
+            System.out.println("网页信息详情："+document.toString());
             return null;
         }
         Element element = elements.get(0);
